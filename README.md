@@ -85,48 +85,12 @@ MIT（与原项目一致）
 
 ---
 
-## 安装（打包版本）
+## 安装
 
-### Debian / Ubuntu（.deb）
-
-```bash
-sudo apt install ./dist/mibuds-linux_1.0.0_all.deb
-# 或
-sudo dpkg -i dist/mibuds-linux_1.0.0_all.deb && sudo apt -f install
-```
-
-卸载：`sudo apt remove mibuds-linux`
-
-### Fedora / RHEL / openSUSE（.rpm）
-
-```bash
-sudo rpm -ivh dist/mibuds-linux-1.0.0-1.noarch.rpm
-# 或
-sudo dnf install ./dist/mibuds-linux-1.0.0-1.noarch.rpm
-```
-
-卸载：`sudo rpm -e mibuds-linux`
-
-### AppImage（免安装，双击即用）
-
-```bash
-chmod +x dist/MiBuds-1.0.0-x86_64.AppImage
-./dist/MiBuds-1.0.0-x86_64.AppImage
-```
-
-依赖宿主机已装 BlueZ + GTK3 + AppIndicator（Ubuntu/Fedora 桌面默认都有）。
-
+安装包见 [Releases](../../releases)：选对应发行版的 `.deb` / `.rpm`，或免安装的 `.AppImage`。
 
 ## 从源码运行
 
-无需打包，直接：
-
 ```bash
 ./mibuds.sh
-```
-
-## 校验下载
-
-```bash
-cd dist && sha256sum -c SHA256SUMS
 ```
