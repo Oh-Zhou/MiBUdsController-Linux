@@ -116,16 +116,6 @@ chmod +x dist/MiBuds-1.0.0-x86_64.AppImage
 
 依赖宿主机已装 BlueZ + GTK3 + AppIndicator（Ubuntu/Fedora 桌面默认都有）。
 
-### Flatpak
-
-```bash
-flatpak install --user flathub org.freedesktop.Platform//26.08
-flatpak-builder --user --install --force-clean build flatpak/io.github.mibuds.Controller.yml
-flatpak run io.github.mibuds.Controller
-```
-
-> Flatpak 沙箱需要 `--socket=session-bus --socket=system-bus --device=all` 访问蓝牙（manifest 已配置）。
-> 若系统不允许非特权用户命名空间（bwrap 报错），需 root 或调整 kernel.unprivileged_userns_clone。
 
 ## 从源码运行
 
