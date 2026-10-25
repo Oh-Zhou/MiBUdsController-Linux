@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=MiBuds 耳机控制
+Name[zh_CN]=小米耳机控制
+Comment=Xiaomi/Redmi earbuds battery and ANC controller
+Comment[zh_CN]=小米/红米耳机电量与降噪控制
+# 安装包（deb/rpm）已将 mibuds 装入 /usr/bin；源码运行请改为本仓库 mibuds.sh 的绝对路径
+Exec=mibuds
+Icon=battery-good-symbolic
+Terminal=false
+Categories=Utility;AudioVideo;
+Keywords=xiaomi;redmi;earbuds;bluetooth;anc;
+X-GNOME-Autostart-enabled=true

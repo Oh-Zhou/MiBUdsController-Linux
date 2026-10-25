@@ -1,0 +1,14 @@
+Package: mibuds-linux
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: all
+Depends: python3, python3-gi, gir1.2-gtk-3.0, gir1.2-ayatanaappindicator3-0.1, bluez
+Recommends: gnome-shell-extension-ubuntu-appindicators | plasma-workspace | xfce4-panel
+Maintainer: oh_zhou <oh_zhou@localhost>
+Description: Xiaomi/Redmi earbuds battery and ANC controller for Linux
+ StatusNotifier tray app showing left/right/case battery and switching
+ noise-cancelling modes (ANC / transparency / off) on Xiaomi and Redmi
+ earbuds over Bluetooth RFCOMM (RCSP protocol).
+ .
+ Ported from the Windows MiBudsController project.

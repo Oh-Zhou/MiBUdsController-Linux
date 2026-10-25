@@ -1,0 +1,3 @@
+#!/bin/sh
+# Thin launcher installed to /usr/bin — entry point for menu / autostart.
+exec /opt/mibuds-linux/mibuds.sh "$@"
