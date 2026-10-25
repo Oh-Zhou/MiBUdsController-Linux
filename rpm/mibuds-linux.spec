@@ -1,5 +1,5 @@
 Name:           mibuds-linux
-Version:        1.0.0
+Version:        1.0.1
 Release:        1%{?dist}
 Summary:        Xiaomi/Redmi earbuds battery and ANC controller for Linux
 License:        MIT
@@ -44,5 +44,15 @@ install -m 644 README.md %{buildroot}/usr/share/doc/mibuds-linux/
 /usr/share/doc/mibuds-linux/README.md
 
 %changelog
+* Sun Oct 25 2026 oh_zhou <oh_zhou@localhost> - 1.0.1-1
+- Fix random crash from GTK calls made on the bluetooth worker thread
+- Fix tray menu battery/status text never refreshing after the first update
+- Fix deadlock after a disconnect (socket timeout + send lock) which made
+  ANC switching silently do nothing
+- Report an explicit message when switching modes while disconnected
+- Do not page the earbuds ourselves; wait for the system bluetooth link
+- Sanitize non-UTF-8 text before passing it to GTK labels
+- Add a watchdog that reconnects when the worker thread stalls
+
 * Sun Oct 25 2026 oh_zhou <oh_zhou@localhost> - 1.0.0-1
 - Initial release: battery display + ANC switch tray app for Linux

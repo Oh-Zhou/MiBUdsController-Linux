@@ -27,10 +27,12 @@ DESK
 # 128x128 icon placeholder — replace with real icon
 convert -size 128x128 xc:white -fill black -draw "circle 64,64 64,10" mibuds.AppDir/mibuds.png 2>/dev/null || \
   cp /usr/share/icons/Adwaita/symbolic/legacy/battery-good-symbolic.svg mibuds.AppDir/mibuds.svg
-# 离线/内网环境可指定本地 runtime：APPIMAGE_RUNTIME=/path/to/runtime-x86_64
+# 离线/内网环境可指定本地 runtime：APPIMAGE_RUNTIME=/path/to/runtime-${ARCH}
 RUNTIME_ARG=""
 if [ -n "${APPIMAGE_RUNTIME:-}" ] && [ -f "$APPIMAGE_RUNTIME" ]; then
   RUNTIME_ARG="--runtime-file $APPIMAGE_RUNTIME"
 fi
 # shellcheck disable=SC2086
-ARCH=x86_64 "$TOOL" --no-appstream $RUNTIME_ARG mibuds.AppDir ../release/MiBuds-${VERSION}-x86_64.AppImage
+ARCH="${ARCH:-x86_64}"
+export ARCH
+"$TOOL" --no-appstream $RUNTIME_ARG mibuds.AppDir "../release/MiBuds-${VERSION}-${ARCH}.AppImage"

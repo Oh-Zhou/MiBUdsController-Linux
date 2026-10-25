@@ -26,5 +26,5 @@ Keywords=xiaomi;redmi;earbuds;bluetooth;anc;
 DESK
 cp ../README.md "$ROOT/usr/share/doc/mibuds-linux/"
 cp -r DEBIAN "$ROOT/"
-fakeroot dpkg-deb --build "$ROOT" ../release/mibuds-linux_${VERSION}_all.deb
-echo "deb built: ../release/mibuds-linux_${VERSION}_all.deb"
+fakeroot dpkg-deb --build "$ROOT" ../release/MiBuds-${VERSION}-all.deb
+echo "deb built: ../release/MiBuds-${VERSION}-all.deb"

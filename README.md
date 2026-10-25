@@ -18,20 +18,21 @@
 
 | 安装包 | 适用 |
 |---|---|
-| `mibuds-linux_1.0.0_all.deb` | Debian / Ubuntu |
-| `mibuds-linux-1.0.0-1.noarch.rpm` | Fedora / RHEL / openSUSE |
-| `MiBuds-1.0.0-x86_64.AppImage` | 任意发行版，免安装 |
+| `MiBuds-1.0.1-all.deb` | Debian / Ubuntu（任意 CPU 架构） |
+| `MiBuds-1.0.1-noarch.rpm` | Fedora / RHEL / openSUSE（任意 CPU 架构） |
+| `MiBuds-1.0.1-x86_64.AppImage` | Intel / AMD 64 位，免安装 |
+| `MiBuds-1.0.1-aarch64.AppImage` | ARM 64 位（树莓派、飞腾等），免安装 |
 
 ```bash
 # Debian / Ubuntu
-sudo apt install ./mibuds-linux_1.0.0_all.deb
+sudo apt install ./MiBuds-1.0.1-all.deb
 
 # Fedora / RHEL / openSUSE
-sudo dnf install ./mibuds-linux-1.0.0-1.noarch.rpm
+sudo dnf install ./MiBuds-1.0.1-noarch.rpm
 
-# AppImage（免安装）
-chmod +x MiBuds-1.0.0-x86_64.AppImage
-./MiBuds-1.0.0-x86_64.AppImage
+# AppImage（免安装，按 CPU 架构选择）
+chmod +x MiBuds-1.0.1-x86_64.AppImage   # 或 aarch64
+./MiBuds-1.0.1-x86_64.AppImage
 ```
 
 安装后从应用菜单启动「MiBuds 耳机控制」，或终端运行 `mibuds`。

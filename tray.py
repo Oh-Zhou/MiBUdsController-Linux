@@ -68,7 +68,7 @@ from rcsp import (
 
 # ---------- 配置 ----------
 
-APP_VERSION = "1.0.0"
+APP_VERSION = "1.0.1"
 GITHUB_REPO = "Oh-Zhou/MiBUdsController-Linux"
 GITHUB_LATEST_API = f"https://api.github.com/repos/{GITHUB_REPO}/releases/latest"
 GITHUB_RELEASES_URL = f"https://github.com/{GITHUB_REPO}/releases"

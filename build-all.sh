@@ -21,8 +21,8 @@ if command -v rpmbuild >/dev/null 2>&1; then
     --define "_tmppath $TOP/TMP" --define "_dbpath $TOP/DB" \
     --define "_build_id_links none" --define "debug_package %{nil}" \
     -ba rpm/mibuds-linux.spec
-  cp "$TOP"/RPMS/noarch/*.rpm dist/ 2>/dev/null || true
-  cp "$TOP"/SRPMS/*.src.rpm dist/ 2>/dev/null || true
+  cp "$TOP"/RPMS/noarch/*.rpm "dist/MiBuds-${VERSION}-noarch.rpm" 2>/dev/null || true
+  cp "$TOP"/SRPMS/*.src.rpm dist/ 2>/dev/null || true  # src.rpm 保留原名
 else
   echo "  rpmbuild not found — install: sudo apt install rpm" 
 fi
@@ -36,5 +36,5 @@ fi
 
 
 echo "=== checksums ==="
-cd dist && sha256sum *.deb *.rpm *.AppImage 2>/dev/null | tee SHA256SUMS || true
+cd dist && sha256sum MiBuds-*.deb MiBuds-*.rpm MiBuds-*.AppImage 2>/dev/null | tee SHA256SUMS || true
 echo "done → dist/"
